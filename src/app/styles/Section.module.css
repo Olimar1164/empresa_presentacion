@@ -1,0 +1,16 @@
+/* src/app/styles/Section.module.css */
+.section {
+  margin: 1rem auto; /* Reducido de 2rem a 1rem */
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding: 1.5rem; /* Reducido de 2rem a 1.5rem */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px); /* Reducido de -10px a -5px para un efecto más sutil */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

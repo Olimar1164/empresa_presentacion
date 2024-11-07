@@ -1,0 +1,57 @@
+/* src/app/styles/globals.css */
+
+/* Importación de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definición de componentes personalizados */
+@layer components {
+  /* Contenedor principal para secciones */
+  .container-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Estilos para el carrusel Swiper */
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply text-white opacity-75 hover:opacity-100 transition-opacity;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    z-index: 50 !important;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 16px !important;
+  }
+
+  .swiper-pagination {
+    @apply bottom-4 !important;
+  }
+
+  .swiper-pagination-bullet {
+    @apply bg-white opacity-75;
+    pointer-events: auto;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 6px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-blue-500 opacity-100;
+  }
+}
+
+/* Estilos globales */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-900 text-white;
+}
