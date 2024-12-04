@@ -1,4 +1,3 @@
-// src/app/components/Layout.tsx
 import TopBar from './TopBar';
 import Footer from './Footer';
 

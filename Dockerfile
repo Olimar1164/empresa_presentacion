@@ -1,5 +1,5 @@
-# Usar una imagen base oficial de Node.js
-FROM node:18-alpine
+# Etapa de construcción
+FROM node:18-alpine AS builder
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -16,8 +16,17 @@ COPY . .
 # Construir la aplicación
 RUN npm run build
 
-# Exponer el puerto en el que la aplicación se ejecutará
-EXPOSE 3000
+# Etapa de producción
+FROM nginx:alpine
 
-# Comando para ejecutar la aplicación
-CMD ["npm", "start"]
+# Copiar la configuración personalizada de nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Copiar los archivos estáticos construidos desde la etapa de builder
+COPY --from=builder /app/out /usr/share/nginx/html
+
+# Exponer el puerto 80
+EXPOSE 80
+
+# Iniciar Nginx
+CMD ["nginx", "-g", "daemon off;"]
