@@ -14,7 +14,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/empresa_presentacion/favicon.ico" />
       </head>
       <body className="bg-gray-900">
         {children}

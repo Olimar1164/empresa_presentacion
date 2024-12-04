@@ -1,12 +1,13 @@
-// next.config.js
 const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '' : '';
 
 module.exports = {
   output: 'export',
-  basePath: isProd ? '/empresa_presentacion' : '',
-  assetPrefix: isProd ? '/empresa_presentacion/' : '',
+  basePath,
+  assetPrefix: basePath,
   images: {
     domains: ['images.unsplash.com'],
-    unoptimized: true, // Deshabilitar la optimización de imágenes
+    unoptimized: true,
   },
+  distDir: '.next',
 };
