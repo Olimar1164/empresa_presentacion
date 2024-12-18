@@ -47,7 +47,7 @@ const ContactForm = () => {
       } else {
         alert('Error al enviar el mensaje');
       }
-    } catch (error) {
+    } catch {
       alert('Error al enviar el mensaje');
     }
   };
@@ -85,7 +85,7 @@ const ContactForm = () => {
       </div>
       <div className="mb-4">
         <HCaptcha
-          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY}
+          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ''}
           onVerify={setCaptchaToken}
         />
       </div>

@@ -2,7 +2,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const basePath = isProd ? '' : '';
 
 module.exports = {
-  output: 'export',
+  output: 'standalone',
   basePath,
   assetPrefix: basePath,
   images: {
