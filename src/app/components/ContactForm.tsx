@@ -10,7 +10,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     const fetchCsrfToken = async () => {
-      const response = await fetch('http://localhost:8000/api/csrf/', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/csrf/`, {
         credentials: 'include',
       });
       const data = await response.json();
@@ -31,7 +31,7 @@ const ContactForm = () => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:8000/api/contactos/', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contactos/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
