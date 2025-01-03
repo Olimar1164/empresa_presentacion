@@ -55,3 +55,11 @@ html {
 body {
   @apply bg-gray-900 text-white;
 }
+
+/* Estilos para el formulario de HCaptcha */
+.hcaptcha {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex;
+  justify-content: center;
+}

@@ -83,11 +83,14 @@ const ContactForm = () => {
           className="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:border-blue-500 focus:outline-none h-32"
         />
       </div>
-      <div className="mb-4">
-        <HCaptcha
-          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ''}
-          onVerify={setCaptchaToken}
-        />
+      <div className="mb-4 w-full">
+        <div className="w-full">
+          <HCaptcha
+            sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ''}
+            onVerify={setCaptchaToken}
+            className="w-full"
+          />
+        </div>
       </div>
       <button 
         type="submit" 
