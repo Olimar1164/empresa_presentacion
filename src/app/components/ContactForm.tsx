@@ -84,11 +84,10 @@ const ContactForm = () => {
         />
       </div>
       <div className="mb-4 w-full">
-        <div className="w-full">
+        <div className="w-full flex justify-center">
           <HCaptcha
             sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ''}
             onVerify={setCaptchaToken}
-            className="w-full"
           />
         </div>
       </div>

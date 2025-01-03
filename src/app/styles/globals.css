@@ -56,10 +56,9 @@ body {
   @apply bg-gray-900 text-white;
 }
 
-/* Estilos para el formulario de HCaptcha */
-.hcaptcha {
-  width: 100% !important;
-  max-width: 100% !important;
+/* Estilos para el contenedor del formulario de HCaptcha */
+.h-captcha-container {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
