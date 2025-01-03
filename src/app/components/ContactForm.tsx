@@ -83,14 +83,12 @@ const ContactForm = () => {
           className="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:border-blue-500 focus:outline-none h-32"
         />
       </div>
-      <div className="mb-4 w-full">
-        <div className="w-full flex justify-center">
+        <div className="mb-4">
           <HCaptcha
             sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || ''}
             onVerify={setCaptchaToken}
           />
         </div>
-      </div>
       <button 
         type="submit" 
         className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
